@@ -7,6 +7,8 @@ import 'package:flutter_stetho/flutter_stetho.dart';
 import 'home/Home.dart';
 import 'Styles.dart';
 
+//export PATH="$PATH:/Volumes/Work/sdk/flutter/bin"
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Stetho.initialize();
