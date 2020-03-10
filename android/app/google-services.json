@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "124461339667",
+    "firebase_url": "https://coronamongolia-d51dd.firebaseio.com",
+    "project_id": "coronamongolia-d51dd",
+    "storage_bucket": "coronamongolia-d51dd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:124461339667:android:2f48d09c7a3abc491b9be6",
+        "android_client_info": {
+          "package_name": "mn.fr099y.coronamongolia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "124461339667-1cg4jb7lml5fk2ptsouo6tko2gou4cse.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3LDRNX1Bm-tX7ZwO5IlCh5mfaSfe4zDI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "124461339667-1cg4jb7lml5fk2ptsouo6tko2gou4cse.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

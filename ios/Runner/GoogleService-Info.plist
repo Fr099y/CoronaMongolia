@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>124461339667-8v67givurdd1t7dsgqsesq4a87pg60sd.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.124461339667-8v67givurdd1t7dsgqsesq4a87pg60sd</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBtp0mpgLt-GakNDeOvYgA-WF7Hu3GV_5Q</string>
+	<key>GCM_SENDER_ID</key>
+	<string>124461339667</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>mn.fr099y.coronamongolia</string>
+	<key>PROJECT_ID</key>
+	<string>coronamongolia-d51dd</string>
+	<key>STORAGE_BUCKET</key>
+	<string>coronamongolia-d51dd.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:124461339667:ios:3306af1b3b2ffa301b9be6</string>
+	<key>DATABASE_URL</key>
+	<string>https://coronamongolia-d51dd.firebaseio.com</string>
+</dict>
+</plist>
