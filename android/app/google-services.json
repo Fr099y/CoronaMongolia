@@ -30,6 +30,85 @@
             {
               "client_id": "124461339667-1cg4jb7lml5fk2ptsouo6tko2gou4cse.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "124461339667-8v67givurdd1t7dsgqsesq4a87pg60sd.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "mn.fr099y.coronamongolia"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:124461339667:android:45c8c5dbe58894ca1b9be6",
+        "android_client_info": {
+          "package_name": "mn.fr099y.cov.mn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "124461339667-1cg4jb7lml5fk2ptsouo6tko2gou4cse.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3LDRNX1Bm-tX7ZwO5IlCh5mfaSfe4zDI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "124461339667-1cg4jb7lml5fk2ptsouo6tko2gou4cse.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "124461339667-8v67givurdd1t7dsgqsesq4a87pg60sd.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "mn.fr099y.coronamongolia"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:124461339667:android:f0094e76ce56023f1b9be6",
+        "android_client_info": {
+          "package_name": "mn.fr099y.covmongolia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "124461339667-1cg4jb7lml5fk2ptsouo6tko2gou4cse.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3LDRNX1Bm-tX7ZwO5IlCh5mfaSfe4zDI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "124461339667-1cg4jb7lml5fk2ptsouo6tko2gou4cse.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "124461339667-8v67givurdd1t7dsgqsesq4a87pg60sd.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "mn.fr099y.coronamongolia"
+              }
             }
           ]
         }

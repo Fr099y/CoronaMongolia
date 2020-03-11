@@ -3,6 +3,8 @@ import 'package:coronamongolia/home/MyListWidget.dart';
 import 'package:coronamongolia/home/MyMapWidget.dart';
 import 'package:flutter/material.dart';
 
+import 'MohsWeb.dart';
+
 class Home extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();
@@ -29,7 +31,9 @@ class _HomeState extends State<Home> {
             physics: NeverScrollableScrollPhysics(),
             children: <Widget>[
               MyMapWidget(),
-              MyListWidget(),
+              MohsWeb(),
+// PlayStore-ийн үйлчилгээний журмаас болоод түр хаав
+//              MyListWidget(),
             ],
           ),
         ),
@@ -43,9 +47,14 @@ class _HomeState extends State<Home> {
             title: Text("Газрын зураг"),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.list),
-            title: Text("Жагсаалтаар"),
+            icon: Icon(Icons.local_hospital),
+            title: Text("Ковид-ын тухай"),
           ),
+
+//          BottomNavigationBarItem(
+//            icon: Icon(Icons.list),
+//            title: Text("Жагсаалтаар"),
+//          ),
         ],
       ),
     );

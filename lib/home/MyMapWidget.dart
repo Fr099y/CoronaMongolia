@@ -18,6 +18,9 @@ class MyMapWidget extends StatefulWidget {
 class _MyMapWidgetState extends State<MyMapWidget> with AutomaticKeepAliveClientMixin<MyMapWidget> {
   Completer<GoogleMapController> _mapController = Completer();
   double _zoom = 15;
+  var location = new Location();
+//  Set<Circle> _circles = Set.from([]);
+  Set<Circle> _riskCircles = Set.from([]);
 
   @override
   void initState() {
@@ -32,7 +35,7 @@ class _MyMapWidgetState extends State<MyMapWidget> with AutomaticKeepAliveClient
       child: StreamBuilder<dynamic>(
           stream: globalStatisticData,
           builder: (context, snapshot) {
-            Set<Circle> circles = Set.from([]);
+            Set<Circle> _globalCircles = Set.from([]);
             bool _hasData = snapshot.hasData && snapshot.data != null;
             if (_hasData) {
               (snapshot.data['features'] as List).forEach((feature) {
@@ -40,7 +43,7 @@ class _MyMapWidgetState extends State<MyMapWidget> with AutomaticKeepAliveClient
                 double _lat = double.parse("${_data['Lat']}");
                 double _lon = double.parse("${_data['Long_']}");
                 String _id = "${_data['OBJECTID']}";
-                circles.add(
+                _globalCircles.add(
                   Circle(
                     circleId: CircleId(_id),
                     center: LatLng(_lat, _lon),
@@ -56,6 +59,7 @@ class _MyMapWidgetState extends State<MyMapWidget> with AutomaticKeepAliveClient
                 stream: Firestore.instance.collection("locations").snapshots(),
                 builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> querySnapshot) {
                   if (querySnapshot.hasData && querySnapshot.data != null) {
+                    _riskCircles.clear();
                     querySnapshot.data.documents.forEach((document) {
                       LatLng _latLng;
                       if (document.data.containsKey('location')) {
@@ -63,14 +67,14 @@ class _MyMapWidgetState extends State<MyMapWidget> with AutomaticKeepAliveClient
                         _latLng = LatLng(_geoPoint.latitude, _geoPoint.longitude);
                       }
                       if (_latLng != null) {
-                        circles.add(
+                        _riskCircles.add(
                           Circle(
                             circleId: CircleId(document.documentID),
                             center: _latLng,
-                            fillColor: Colors.orangeAccent.withOpacity(0.3),
+                            fillColor: document.data['isClean'] == true ? Colors.green.withOpacity(0.3) : Colors.orangeAccent.withOpacity(0.3),
                             radius: double.parse("${document.data['radius'] ?? 70}"),
                             strokeWidth: 1,
-                            strokeColor: Colors.red,
+                            strokeColor: document.data['isClean'] == true ? Colors.green : Colors.red,
                             onTap: () => showCircleDetailBottomSheet(context, document),
                             consumeTapEvents: true,
                           ),
@@ -78,9 +82,10 @@ class _MyMapWidgetState extends State<MyMapWidget> with AutomaticKeepAliveClient
                       }
                     });
                   }
+                  _globalCircles.addAll(_riskCircles);
                   return GoogleMap(
                     initialCameraPosition: CameraPosition(zoom: _zoom, target: LatLng(47.918417, 106.917610)),
-                    circles: circles,
+                    circles: _globalCircles,
                     myLocationButtonEnabled: true,
                     myLocationEnabled: true,
                     onCameraMove: (cameraPosition) {
@@ -111,10 +116,12 @@ class _MyMapWidgetState extends State<MyMapWidget> with AutomaticKeepAliveClient
   bool get wantKeepAlive => true;
 
   getLocationPermission() async {
-    var location = new Location();
     try {
       location.requestPermission().then((_) {
         setState(() {});
+        location.onLocationChanged().listen((currentLocation) {
+          //TODO circle дотор орсон үгүйг шалгаад хэрвээ орсон бол анхааруулга өгөх
+        });
       });
     } catch (e) {
       if (e.code == 'PERMISSION_DENIED') {

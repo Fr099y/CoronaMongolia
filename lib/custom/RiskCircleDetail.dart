@@ -11,8 +11,11 @@ class RiskCircleDetail extends StatefulWidget {
 }
 
 class _RiskCircleDetailState extends State<RiskCircleDetail> {
+  bool _isClean = false;
+
   @override
   Widget build(BuildContext context) {
+    _isClean = widget.document.data['isClean'] == true;
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 12, vertical: 20),
       child: Column(
@@ -23,7 +26,7 @@ class _RiskCircleDetailState extends State<RiskCircleDetail> {
           ),
           Divider(),
           Text(
-            "Эрсдлийн зэрэг : ${getRiskText()}",
+            _isClean ? "Ариутгал хийгдсэн" : "Эрсдлийн зэрэг : ${getRiskText()}",
             style: TextStyle(
               color: getRiskColor(),
               fontSize: 16,
@@ -35,7 +38,8 @@ class _RiskCircleDetailState extends State<RiskCircleDetail> {
   }
 
   Color getRiskColor() {
-    switch (int.parse("${widget.document.data['risk']}")) {
+    if (_isClean) return Colors.green;
+    switch (int.parse("${widget.document.data['risk'] ?? 7}")) {
       case 1:
         return Colors.yellowAccent;
       case 2:
@@ -61,7 +65,7 @@ class _RiskCircleDetailState extends State<RiskCircleDetail> {
   }
 
   String getRiskText() {
-    switch (int.parse("${widget.document.data['risk']}")) {
+    switch (int.parse("${widget.document.data['risk'] ?? 7}")) {
       case 1:
         return "Маш бага";
       case 2:

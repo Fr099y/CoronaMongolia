@@ -8,6 +8,7 @@ import 'home/Home.dart';
 import 'Styles.dart';
 
 //export PATH="$PATH:/Volumes/Work/sdk/flutter/bin"
+//flutter build appbundle --target-platform android-arm,android-arm64,android-x64
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+//      debugShowCheckedModeBanner: false,
       theme: baseTheme,
       initialRoute: "/home",
       routes: <String, WidgetBuilder>{

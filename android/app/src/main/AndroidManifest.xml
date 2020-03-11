@@ -8,7 +8,7 @@
     <uses-permission android:name="INTERNET"/>
     <application
         android:name=".MyApp"
-        android:label="Covid-19 Mongolia"
+        android:label="Ковид анхааруулга"
         android:icon="@mipmap/launcher_icon">
         <meta-data android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyD3LDRNX1Bm-tX7ZwO5IlCh5mfaSfe4zDI"/>

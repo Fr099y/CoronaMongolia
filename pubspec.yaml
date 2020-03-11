@@ -29,7 +29,8 @@ dependencies:
   http: ^0.12.0+4
   rxdart: ^0.23.1
   google_maps_flutter: ^0.5.24+1
-  location: ^2.5.3
+  location: ^2.5.4
+  webview_flutter: ^0.3.19+9
 
 dev_dependencies:
   flutter_test:
