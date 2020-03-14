@@ -39,5 +39,9 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSLocationAlwaysUsageDescription</key>
+    <string>Таны байршилыг тодорхойлж анхааруулах үүднээс зөвшөөрөл хүсч байна</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Таны байршилыг тодорхойлж анхааруулах үүднээс зөвшөөрөл хүсч байна</string>
 </dict>
 </plist>
